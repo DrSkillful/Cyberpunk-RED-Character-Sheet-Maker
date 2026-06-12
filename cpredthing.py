@@ -491,6 +491,9 @@ data = {
 with open("stats.json", "w") as f:
     json.dump(data, f, indent=4)
 
+
+# Image writing and generation
+
 draw = ImageDraw.Draw(image_first_page)
 position_y = 196
 position_stats = (625, position_y)
