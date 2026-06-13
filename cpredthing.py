@@ -6,7 +6,7 @@ import os
 
 # TODO:
 # TKinter window
-# Write on image with Pillow
+# Write on image with Pillow - Done
 
 ################################################
 
@@ -34,15 +34,15 @@ awareness_skills = ["Concentration (WILL) [0]", "Conceal/Reveal Object (INT) [1]
 body_skills = ["Athletics (DEX) [5]", "Contortionist (DEX) [6]", "Dance (DEX) [7]", "Endurance (WILL) [8]", "Reist Torture/Drugs (WILL) [9]", "Stealth (DEX) [10]"]
 control_skills = ["Drive Land Vehicle (REF) [11]", "Pilot Air Vehicle x2(REF) [12]", "Pilot Sea Vehicle (REF) [13]", "Riding (REF) [14]"]
 education_skills = ["Accounting (INT) [15]", "Animal Handling (INT) [16]", "Bureaucracy (INT) [17]", "Business (INT) [18]", "Composition (INT) [19]", "Criminology (INT) [20]", "Cryptography (INT) [21]", "Deduction (INT) [22]", "Education (INT) [23]", "Gamble (INT) [24]", "Language (INT) [25]", "Library Search (INT) [26]", "Local Expert (INT) [27]", "Science (INT) [28]", "Tactics (INT) [29]", "Wilderness Survival (INT) [30]"]
-fight_skills = ["Brawling (DEX) [31]", "Evasion (DEX) [32]", "Marital Arts 2x(DEX) [33]", "Melee Weapon (DEX) [34]"]
+fight_skills = ["Brawling (DEX) [31]", "Evasion (DEX) [32]", "Marital Arts x2(DEX) [33]", "Melee Weapon (DEX) [34]"]
 performance_skills = ["Acting (COOL) [35]", "Play Instrument (TECH) [36]"]
-ranged_weapon_skills = ["Archery (REF) [37]", "Autofire 2x(REF) [38]", "Handgun (REF) [39]", "Heavy Weapons 2x(REF) [40]", "Shoulder Arms (REF) [41]"]
+ranged_weapon_skills = ["Archery (REF) [37]", "Autofire x2(REF) [38]", "Handgun (REF) [39]", "Heavy Weapons x2(REF) [40]", "Shoulder Arms (REF) [41]"]
 social_skills = ["Bribery (COOL) [42]", "Conversation (EMP) [43]", "Human Perception (EMP) [44]", "Interrogation (COOL) [45]", "Persuasion (COOL) [46]", "Personal Grooming (COOL) [47]", "Streetwise (COOL) [48]", "Trading (COOL) [49]", "Wardrobe & Style (COOL) [50]"]
-technique_skills = ["Air Vehicle Tech (TECH) [51]", "Basic Tech (TECH) [52]", "Cybertech (TECH) [53]", "Demolitions 2x(TECH) [54]", "Electronics/Security Tech 2x(TECH) [55]", "First Aid (TECH) [56]", "Land Vehicle Tech (TECH) [57]", "Paint/Sculpt/Draw (TECH) [58]", "Paramedic 2x(TECH) [59]", "Photography/Film (TECH) [60]", "Pick Lock (TECH) [61]", "Pick Pocket (TECH) [62]", "Sea Vehicle Tech (TECH) [63]", "Weapons Tech (TECH) [64]"]
+technique_skills = ["Air Vehicle Tech (TECH) [51]", "Basic Tech (TECH) [52]", "Cybertech (TECH) [53]", "Demolitions x2(TECH) [54]", "Electronics/Security Tech x2(TECH) [55]", "First Aid (TECH) [56]", "Forgery (TECH) [57]", "Land Vehicle Tech (TECH) [58]", "Paint/Sculpt/Draw (TECH) [59]", "Paramedic x2(TECH) [60]", "Photography/Film (TECH) [61]", "Pick Lock (TECH) [62]", "Pick Pocket (TECH) [63]", "Sea Vehicle Tech (TECH) [64]", "Weapons Tech (TECH) [65]"]
 
 skill_category_pretty = ["Awareness", "Body", "Control", "Education", "Fighting", "Performance", "Ranged", "Social", "Technique"]
 
-prettyall = ["Concentration (WILL)", "Conceal/Reveal Object (INT)", "Lip Reading (INT)", "Perception (INT)", "Tracking (INT)", "Athletics (DEX)", "Contortionist (DEX)", "Dance (DEX)", "Endurance (WILL)", "Reist Torture/Drugs (WILL)", "Stealth (DEX)", "Drive Land Vehicle (REF)", "Pilot Air Vehicle x2(REF)", "Pilot Sea Vehicle (REF)", "Riding (REF)", "Accounting (INT)", "Animal Handling (INT)", "Bureaucracy (INT)", "Business (INT)", "Composition (INT)", "Criminology (INT)", "Cryptography (INT)", "Deduction (INT)", "Education (INT)", "Gamble (INT)", "Language (INT)", "Library Search (INT)", "Local Expert (INT)", "Science (INT)", "Tactics (INT)", "Wilderness Survival (INT)", "Brawling (DEX)", "Evasion (DEX)", "Marital Arts 2x(DEX)", "Melee Weapon (DEX)", "Acting (COOL)", "Play Instrument (TECH)","Archery (REF)", "Autofire 2x(REF)", "Handgun (REF)", "Heavy Weapons 2x(REF)", "Shoulder Arms (REF)", "Bribery (COOL)", "Conversation (EMP)", "Human Perception (EMP)", "Interrogation (COOL)", "Persuasion (COOL)", "Personal Grooming (COOL)", "Streetwise (COOL)", "Trading (COOL)", "Wardrobe & Style (COOL)", "Air Vehicle Tech (TECH)", "Basic Tech (TECH)", "Cybertech (TECH)", "Demolitions 2x(TECH)", "Electronics/Security Tech 2x(TECH)", "First Aid (TECH)", "Land Vehicle Tech (TECH)", "Paint/Sculpt/Draw (TECH)", "Paramedic 2x(TECH)", "Photography/Film (TECH)", "Pick Lock (TECH)", "Pick Pocket (TECH)", "Sea Vehicle Tech (TECH)", "Weapons Tech (TECH)"]
+prettyall = ["Concentration (WILL)", "Conceal/Reveal Object (INT)", "Lip Reading (INT)", "Perception (INT)", "Tracking (INT)", "Athletics (DEX)", "Contortionist (DEX)", "Dance (DEX)", "Endurance (WILL)", "Reist Torture/Drugs (WILL)", "Stealth (DEX)", "Drive Land Vehicle (REF)", "Pilot Air Vehicle x2(REF)", "Pilot Sea Vehicle (REF)", "Riding (REF)", "Accounting (INT)", "Animal Handling (INT)", "Bureaucracy (INT)", "Business (INT)", "Composition (INT)", "Criminology (INT)", "Cryptography (INT)", "Deduction (INT)", "Education (INT)", "Gamble (INT)", "Language (INT)", "Library Search (INT)", "Local Expert (INT)", "Science (INT)", "Tactics (INT)", "Wilderness Survival (INT)", "Brawling (DEX)", "Evasion (DEX)", "Marital Arts x2(DEX)", "Melee Weapon (DEX)", "Acting (COOL)", "Play Instrument (TECH)","Archery (REF)", "Autofire x2(REF)", "Handgun (REF)", "Heavy Weapons x2(REF)", "Shoulder Arms (REF)", "Bribery (COOL)", "Conversation (EMP)", "Human Perception (EMP)", "Interrogation (COOL)", "Persuasion (COOL)", "Personal Grooming (COOL)", "Streetwise (COOL)", "Trading (COOL)", "Wardrobe & Style (COOL)", "Air Vehicle Tech (TECH)", "Basic Tech (TECH)", "Cybertech (TECH)", "Demolitions x2(TECH)", "Electronics/Security Tech x2(TECH)", "First Aid (TECH)", "Forgery (TECH)" ,"Land Vehicle Tech (TECH)", "Paint/Sculpt/Draw (TECH)", "Paramedic x2(TECH)", "Photography/Film (TECH)", "Pick Lock (TECH)", "Pick Pocket (TECH)", "Sea Vehicle Tech (TECH)", "Weapons Tech (TECH)"]
 
 # 0 - 4 // Awareness Array
 conc, conceal_reveal, lip_read, perc, track = 2, 0, 0, 2, 0
@@ -61,11 +61,11 @@ archery, autofire, handgun, heavy_weapons, shoulder_arms = 0, 0, 0, 0, 0
 # 42 - 50 // Social Array
 bribe, convo, human_perc, interog, pers, personal_grooming, streetwise, trading, ward_n_style = 0, 2, 2, 0, 2, 0, 0, 0, 0
 # 51 - 64 // Technique Array
-air_vehicle, basic, cyber, demo, electronics_security, first_aid, land_vehicle, paintsculptdraw, para, photo_film, pick_lock, pick_pocket, sea_vehicle, weapons = 0, 0, 0, 0, 0, 2, 0 ,0 ,0 ,0, 0, 0, 0, 0
+air_vehicle, basic, cyber, demo, electronics_security, first_aid, forgery ,land_vehicle, paintsculptdraw, para, photo_film, pick_lock, pick_pocket, sea_vehicle, weapons = 0, 0, 0, 0, 0, 2, 0 ,0 ,0 ,0, 0, 0, 0, 0, 0
 
 # skill vars
 
-skills_all = [conc, conceal_reveal, lip_read, perc, track, athletics, contort, dance, endurance, resist, stealth, drive_land, pilot_air, pilot_sea, riding, acc, animal_handling, bureau, business, comp, criminology, cyrptography, deduction, edu, gamble, lang, lib_search, local_exp, sci, tact, wild_surv, brawl, evasion, marital_arts, melee_weapon, acting, playinstrument, archery, autofire, handgun, heavy_weapons, shoulder_arms, bribe, convo, human_perc, interog, pers, personal_grooming, streetwise, trading, ward_n_style, air_vehicle, basic, cyber, demo, electronics_security, first_aid, land_vehicle, paintsculptdraw, para, photo_film, pick_lock, pick_pocket, sea_vehicle, weapons]
+skills_all = [conc, conceal_reveal, lip_read, perc, track, athletics, contort, dance, endurance, resist, stealth, drive_land, pilot_air, pilot_sea, riding, acc, animal_handling, bureau, business, comp, criminology, cyrptography, deduction, edu, gamble, lang, lib_search, local_exp, sci, tact, wild_surv, brawl, evasion, marital_arts, melee_weapon, acting, playinstrument, archery, autofire, handgun, heavy_weapons, shoulder_arms, bribe, convo, human_perc, interog, pers, personal_grooming, streetwise, trading, ward_n_style, air_vehicle, basic, cyber, demo, electronics_security, first_aid, forgery, land_vehicle, paintsculptdraw, para, photo_film, pick_lock, pick_pocket, sea_vehicle, weapons]
 
 all_categories = [awareness_skills, body_skills, control_skills, education_skills, fight_skills, performance_skills, ranged_weapon_skills, social_skills, technique_skills]
 
@@ -147,27 +147,49 @@ def skillselection():
         skill_choice = int(input("Choose a Skill: "))
         add_points = int(input("Add points (min 2 max 6): "))
 
+        if skill_choice == 12 or skill_choice == 38 or skill_choice == 33 or skill_choice == 54 or skill_choice == 55 or skill_choice == 59 or skill_choice == 38 or skill_choice == 40:
+            skill_points -= add_points
+            skills_all[skill_choice] = add_points
+
         if add_points < 2 or add_points > 6 or skills_all[0] > 6 or skills_all[3] > 6 or skills_all[5] > 6 or skills_all[10] > 6 or skills_all[23] > 6 or skills_all[25] > 6 or skills_all[26] > 6 or skills_all[35] > 6 or skills_all[36] > 6 or skills_all[38] > 6 or skills_all[48] > 6:
             print("Invalid input")
             wrong = True
+
         while wrong:
             add_points = int(input("Add points (min 2 max 6): "))
             if add_points < 2 or add_points > 6:
                 print("Invalid input")
             else:
                 wrong = False
+
         skill_points -= add_points
         skills_all[skill_choice] = add_points
 
+        # working code
+
+        # if skill_points == 0:
+        #     confirm = input("Confirm Skills? (Enter no if you're not done) (Y/N): ")
+        #     if confirm == "Y" or confirm == "y":
+        #         if skill_points != 0:
+        #             print("Please allocate all your skill points.")
+        #             skill_points = 64
+        #             choice_done = False
+        #         else:
+        #             choice_done = True
+        #     elif confirm == "N" or confirm == "n":
+        #             choice_done = False
+
+        # debugging/testing code
+
         confirm = input("Confirm Skills? (Enter no if you're not done) (Y/N): ")
         if confirm == "Y" or confirm == "y":
-            if skill_points != 0:
-                print("Please allocate all your skill points.")
-                skill_points = 64
-                choice_done = False
-            else:
-                choice_done = True
+            choice_done = True
         elif confirm == "N" or confirm == "n":
+            choice_done = False
+
+        if skill_points < 0:
+            print("Skill point allocation over limit, please reallocate your points.")
+            skill_points = 64
             choice_done = False
 
 def gear_selection():
@@ -414,17 +436,17 @@ while skill_selection_process:
 
     bdrive_land, bpilot_air, bpilot_sea, briding = stats_choice[1] + skills_all[11], stats_choice[1] + skills_all[12], stats_choice[1] + skills_all[13], stats_choice[1] + skills_all[14]
 
-    bacc, banimal_handling, bbureau, bbusiness, bcomp, bassecriminology, bcyrptography, bdeduction, bedu, bgamble, blang, blib_search, blocal_exp, bsci, btact, bwild_surv = stats_choice[0] + skills_all[14], stats_choice[0] + skills_all[15], stats_choice[0] + skills_all[16], stats_choice[0] + skills_all[17], stats_choice[0] + skills_all[18], stats_choice[0] + skills_all[19], stats_choice[0] + skills_all[20], stats_choice[0] + skills_all[21], stats_choice[0] + skills_all[22], stats_choice[0] + skills_all[23], stats_choice[0] + skills_all[24], stats_choice[0] + skills_all[25], stats_choice[0] + skills_all[26], stats_choice[0] + skills_all[27], stats_choice[0] + skills_all[28], stats_choice[0] + skills_all[29]
+    bacc, banimal_handling, bbureau, bbusiness, bcomp, bassecriminology, bcyrptography, bdeduction, bedu, bgamble, blang, blib_search, blocal_exp, bsci, btact, bwild_surv = stats_choice[0] + skills_all[15], stats_choice[0] + skills_all[16], stats_choice[0] + skills_all[17], stats_choice[0] + skills_all[18], stats_choice[0] + skills_all[19], stats_choice[0] + skills_all[20], stats_choice[0] + skills_all[21], stats_choice[0] + skills_all[22], stats_choice[0] + skills_all[23], stats_choice[0] + skills_all[24], stats_choice[0] + skills_all[25], stats_choice[0] + skills_all[26], stats_choice[0] + skills_all[27], stats_choice[0] + skills_all[28], stats_choice[0] + skills_all[29], stats_choice[0] + skills_all[30]
 
-    bbrawl, bevasion, bmarital_arts, bmelee_weapon = stats_choice[2] + skills_all[30], stats_choice[2] + skills_all[31], stats_choice[2] + skills_all[32], stats_choice[2] + skills_all[33]
+    bbrawl, bevasion, bmarital_arts, bmelee_weapon = stats_choice[2] + skills_all[31], stats_choice[2] + skills_all[32], stats_choice[2] + skills_all[33], stats_choice[2] + skills_all[34]
 
-    bacting, bplayinstrument = stats_choice[4] + skills_all[34], stats_choice[3] + skills_all[35]
+    bacting, bplayinstrument = stats_choice[4] + skills_all[35], stats_choice[3] + skills_all[36]
 
-    barchery, bautofire, bhandgun, bheavy_weapons, bshoulder_arms = stats_choice[1] + skills_all[36], stats_choice[1] + skills_all[37], stats_choice[1] + skills_all[38], stats_choice[1] + skills_all[39], stats_choice[1] + skills_all[40]
+    barchery, bautofire, bhandgun, bheavy_weapons, bshoulder_arms = stats_choice[1] + skills_all[37], stats_choice[1] + skills_all[38], stats_choice[1] + skills_all[39], stats_choice[1] + skills_all[40], stats_choice[1] + skills_all[41]
 
-    bbribe, bconvo, bhuman_perc, binterog, bpers, bpersonal_grooming, bstreetwise, btrading, bward_n_style = stats_choice[4] + skills_all[41], stats_choice[9] + skills_all[42], stats_choice[9] + skills_all[43], stats_choice[4] + skills_all[44], stats_choice[4] + skills_all[45], stats_choice[4] + skills_all[46], stats_choice[4] + skills_all[47], stats_choice[4] + skills_all[48], stats_choice[4] + skills_all[49]
+    bbribe, bconvo, bhuman_perc, binterog, bpers, bpersonal_grooming, bstreetwise, btrading, bward_n_style = stats_choice[4] + skills_all[42], stats_choice[9] + skills_all[43], stats_choice[9] + skills_all[44], stats_choice[4] + skills_all[45], stats_choice[4] + skills_all[46], stats_choice[4] + skills_all[47], stats_choice[4] + skills_all[48], stats_choice[4] + skills_all[49], stats_choice[4] + skills_all[50]
 
-    bair_vehicle, bbasic, bcyber, bdemo, belectronics_security, bfirst_aid, bland_vehicle, bpaintsculptdraw, bpara, bphoto_film, bpick_lock, bpick_pocket, bsea_vehicle, bweapons = stats_choice[3] + skills_all[50], stats_choice[3] + skills_all[51], stats_choice[3] + skills_all[52], stats_choice[3] + skills_all[53], stats_choice[3] + skills_all[54], stats_choice[3] + skills_all[55], stats_choice[3] + skills_all[56], stats_choice[3] + skills_all[57], stats_choice[3] + skills_all[58], stats_choice[3] + skills_all[59], stats_choice[3] + skills_all[60], stats_choice[3] + skills_all[61], stats_choice[3] + skills_all[62], stats_choice[3] + skills_all[63]
+    bair_vehicle, bbasic, bcyber, bdemo, belectronics_security, bfirst_aid, bforgery ,bland_vehicle, bpaintsculptdraw, bpara, bphoto_film, bpick_lock, bpick_pocket, bsea_vehicle, bweapons = stats_choice[3] + skills_all[51], stats_choice[3] + skills_all[52], stats_choice[3] + skills_all[53], stats_choice[3] + skills_all[54], stats_choice[3] + skills_all[55], stats_choice[3] + skills_all[56], stats_choice[3] + skills_all[57] ,stats_choice[3] + skills_all[58], stats_choice[3] + skills_all[59], stats_choice[3] + skills_all[60], stats_choice[3] + skills_all[61], stats_choice[3] + skills_all[62], stats_choice[3] + skills_all[63], stats_choice[3] + skills_all[64], stats_choice[3] + skills_all[65]
 
     basecalc = [bconc, bconceal, blip, bperc, btrack, bathletics, bcontort, bdance, bendurance, bresist, bstealth,
                 bdrive_land, bpilot_air, bpilot_sea, briding, bacc, banimal_handling, bbureau, bbusiness, bcomp,
@@ -432,7 +454,7 @@ while skill_selection_process:
                 bwild_surv, bbrawl, bevasion, bmarital_arts, bmelee_weapon, bacting, bplayinstrument, barchery,
                 bautofire, bhandgun, bheavy_weapons, bshoulder_arms, bbribe, bconvo, bhuman_perc, binterog, bpers,
                 bpersonal_grooming, bstreetwise, btrading, bward_n_style, bair_vehicle, bbasic, bcyber, bdemo,
-                belectronics_security, bfirst_aid, bland_vehicle, bpaintsculptdraw, bpara, bphoto_film, bpick_lock,
+                belectronics_security, bfirst_aid, bforgery, bland_vehicle, bpaintsculptdraw, bpara, bphoto_film, bpick_lock,
                 bpick_pocket, bsea_vehicle, bweapons]
 
     if skills_sure == 'n' or skills_sure == 'N' or skills_sure == 'no' or skills_sure == 'No':
@@ -464,32 +486,32 @@ while skill_selection_process:
               "MOVE: ", stats_choice[7], "BODY: ", stats_choice[8], "EMP: ", stats_choice[9], "\n\nHUMANITY: ", hum,
               "HITPOINTS: ", hp)
 
-gear_selection()
-
-# This part of the code basically puts all the skills in a JSON file to be read later
-
-data = {
-            "STATS": dict(zip(stats, stats_choice)),
-            "SKILLS:": skill_category_pretty,
-            "First number is the level, second one is the Base":"Base is calculated as STAT+LEVEL",
-            skill_category_pretty[0]: dict(zip(prettyall[0:5], zip(skills_all[0:5],  basecalc[0:5]))),
-            skill_category_pretty[1]: dict(zip(prettyall[6:10], zip(skills_all[6:10], basecalc[6:10]))),
-            skill_category_pretty[2]: dict(zip(prettyall[11:14], zip(skills_all[11:14], basecalc[11:14]))),
-            skill_category_pretty[3]: dict(zip(prettyall[15:30], zip(skills_all[15:30], basecalc[15:30]))),
-            skill_category_pretty[4]: dict(zip(prettyall[31:34], zip(skills_all[31:34], basecalc[31:34]))),
-            skill_category_pretty[5]: dict(zip(prettyall[35:36], zip(skills_all[35:36], basecalc[35:36]))),
-            skill_category_pretty[6]: dict(zip(prettyall[37:41], zip(skills_all[37:41], basecalc[37:41]))),
-            skill_category_pretty[7]: dict(zip(prettyall[42:50], zip(skills_all[42:50], basecalc[42:50]))),
-            skill_category_pretty[8]: dict(zip(prettyall[51:64], zip(skills_all[51:64], basecalc[51:64]))),
-            "GEAR": inventory,
-            "WEAPONS": weapon_inventory,
-            "ARMOR": armor_inventory,
-        }
-
-# Create and write/Overwrite stat.json file
-
-with open("stats.json", "w") as f:
-    json.dump(data, f, indent=4)
+# gear_selection()
+#
+# # This part of the code basically puts all the skills in a JSON file to be read later
+#
+# data = {
+#             "STATS": dict(zip(stats, stats_choice)),
+#             "SKILLS:": skill_category_pretty,
+#             "First number is the level, second one is the Base":"Base is calculated as STAT+LEVEL",
+#             skill_category_pretty[0]: dict(zip(prettyall[0:5], zip(skills_all[0:5],  basecalc[0:5]))),
+#             skill_category_pretty[1]: dict(zip(prettyall[6:10], zip(skills_all[6:10], basecalc[6:10]))),
+#             skill_category_pretty[2]: dict(zip(prettyall[11:14], zip(skills_all[11:14], basecalc[11:14]))),
+#             skill_category_pretty[3]: dict(zip(prettyall[15:30], zip(skills_all[15:30], basecalc[15:30]))),
+#             skill_category_pretty[4]: dict(zip(prettyall[31:34], zip(skills_all[31:34], basecalc[31:34]))),
+#             skill_category_pretty[5]: dict(zip(prettyall[35:36], zip(skills_all[35:36], basecalc[35:36]))),
+#             skill_category_pretty[6]: dict(zip(prettyall[37:41], zip(skills_all[37:41], basecalc[37:41]))),
+#             skill_category_pretty[7]: dict(zip(prettyall[42:50], zip(skills_all[42:50], basecalc[42:50]))),
+#             skill_category_pretty[8]: dict(zip(prettyall[51:64], zip(skills_all[51:64], basecalc[51:64]))),
+#             "GEAR": inventory,
+#             "WEAPONS": weapon_inventory,
+#             "ARMOR": armor_inventory,
+#         }
+#
+# # Create and write/Overwrite stat.json file
+#
+# with open("stats.json", "w") as f:
+#     json.dump(data, f, indent=4)
 
 
 # Image writing and generation
@@ -503,38 +525,175 @@ position_stats_skills = (1094, position_y_skills)
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 36)
 draw.text((176,648), role_choice, font=font, fill=(0,0,0))
 
-for i in range(10):
+for i in range(12):
     font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 36)
     position_y += 120 - i
-    position_stats = (625, position_y)
+    position_stats = (635, position_y)
 
-    if i == 0:
-        position_y = 196
-        position_stats = (625, position_y)
+    if i < 10:
+        if i == 0:
+            position_y = 196
+            position_stats = (635, position_y)
+        if i == 6 or i == 9:
+            font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
+            position_y += 20
+            position_stats = (675, position_y)
+        draw.text(position_stats, str(stats_choice[i]), font=font, fill=(0, 0, 0))
+    else:
+        draw.text((323, 1384), str(hp), font=font, fill=(0, 0, 0))
+        draw.text((444, 1263), str(hum), font=font, fill=(0, 0, 0))
 
-    if i == 6 or i == 9:
-        font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 20)
-        position_y += 20
-        position_stats = (670, position_y)
-
-    draw.text(position_stats, str(stats_choice[i]), font=font, fill=(0,0,0))
-
-for i in range(11):
+# first column writings
+for i in range(25):
     font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
     position_y_skills += 39
     position_stats_skills = (1094, position_y_skills)
 
     if i == 0:
-        position_y_skills = 205
+        position_y_skills = 200
         position_stats_skills = (1094, position_y_skills)
 
-    if i == 5:
+    if i == 5 or i == 11 or i == 25 or i == 15:
         position_y_skills += 46
         position_stats_skills = (1094, position_y_skills)
 
-    if i < 10:
-        draw.text(position_stats_skills, str(stats_choice[i]), font=font, fill=(0, 0, 0))
-    else:
-        draw.text(position_stats_skills, str(stats_choice[i-1]), font=font, fill=(0, 0, 0))
+    if i == 0 or i == 8 or i == 9:
+        draw.text(position_stats_skills, str(stats_choice[5]), font=font, fill=(0, 0, 0))
+    elif 0 < i < 5 or 14 < i < 25:
+        draw.text(position_stats_skills, str(stats_choice[0]), font=font, fill=(0, 0, 0))
+    elif i == 5 or i == 6 or i == 7 or i == 10:
+        draw.text(position_stats_skills, str(stats_choice[2]), font=font, fill=(0, 0, 0))
+    elif 10 < i < 15:
+        draw.text(position_stats_skills, str(stats_choice[1]), font=font, fill=(0, 0, 0))
+
+for i in range(25):
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
+    position_y_skills += 39
+    position_level_skills = (1031, position_y_skills)
+
+    if i == 0:
+        position_y_skills = 200
+        position_level_skills = (1031, position_y_skills)
+
+    if i == 4 or i == 10 or i == 24 or i == 14:
+        position_y_skills += 46
+        position_stats_skills = (1031, position_y_skills)
+
+    draw.text(position_level_skills, str(skills_all[i]), font=font, fill=(0, 0, 0))
+
+for i in range(25):
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
+    position_y_skills += 39
+    position_base_skills = (1162, position_y_skills)
+
+    if i == 0:
+        position_y_skills = 200
+        position_base_skills = (1162, position_y_skills)
+
+    if i == 4 or i == 10 or i == 24 or i == 14:
+        position_y_skills += 46
+        position_stats_skills = (1162, position_y_skills)
+
+    draw.text(position_base_skills, str(basecalc[i]), font=font, fill=(0, 0, 0))
+
+# last column writings
+
+for i in range(26):
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
+    position_y_skills += 39
+    position_stats_skills = (2080, position_y_skills)
+
+    if i == 0:
+        position_y_skills = 200
+        position_stats_skills = (2080, position_y_skills)
+
+    if i == 2 or i == 11:
+        position_y_skills += 44
+        position_stats_skills = (2080, position_y_skills)
+
+    if i == 0 or i == 1:
+        draw.text(position_stats_skills, str(stats_choice[1]), font=font, fill=(0, 0, 0))
+    elif i == 2 or 4 < i < 11:
+        draw.text(position_stats_skills, str(stats_choice[4]), font=font, fill=(0, 0, 0))
+    elif i == 3 or i == 4:
+        draw.text(position_stats_skills, str(stats_choice[9]), font=font, fill=(0, 0, 0))
+    elif 10 < i < 27:
+        position_y_skills += 1
+        draw.text(position_stats_skills, str(stats_choice[3]), font=font, fill=(0, 0, 0))
+
+for i in range(26):
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
+    position_y_skills += 39
+    position_level_skills = (2016, position_y_skills)
+
+    if i == 0:
+        position_y_skills = 200
+        position_level_skills = (2016, position_y_skills)
+
+    if i == 1 or i == 10:
+        position_y_skills += 44
+        position_stats_skills = (2016, position_y_skills)
+
+    if i == 14:
+        position_y_skills += 10
+        position_stats_skills = (2016, position_y_skills)
+
+    draw.text(position_level_skills, str(skills_all[i+40]), font=font, fill=(0, 0, 0))
+
+    if i == 26:
+        break
+
+for i in range(26):
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
+    position_y_skills += 39
+    position_base_skills = (2148, position_y_skills)
+
+    if i == 0:
+        position_y_skills = 200
+        position_base_skills = (2148, position_y_skills)
+
+    if i == 1 or i == 10:
+        position_y_skills += 44
+        position_stats_skills = (2148, position_y_skills)
+
+    if i == 14:
+        position_y_skills += 10
+        position_stats_skills = (2016, position_y_skills)
+
+    draw.text(position_base_skills, str(basecalc[i+40]), font=font, fill=(0, 0, 0))
+
+    if i == 26:
+        break
+
+# middle column
+
+for i in range(21):
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
+    position_y_skills += 39
+    position_stats_skills = (1590, position_y_skills)
+
+    if i == 0:
+        position_y_skills = 239
+        position_stats_skills = (1590, position_y_skills)
+
+    if i == 4 or i == 7 or i == 16:
+        position_y_skills += 43
+        position_stats_skills = (1590, position_y_skills)
+
+    if i == 11 or i == 15 or i == 18:
+        position_y_skills += 40
+        position_stats_skills = (1590, position_y_skills)
+
+    if i < 11:
+        draw.text(position_stats_skills, str(stats_choice[0]), font=font, fill=(0, 0, 0))
+    elif 10 < i < 15:
+        position_y_skills += 2
+        draw.text(position_stats_skills, str(stats_choice[2]), font=font, fill=(0, 0, 0))
+    elif i == 15:
+        draw.text(position_stats_skills, str(stats_choice[4]), font=font, fill=(0, 0, 0))
+    elif i == 16 or i == 17:
+        draw.text(position_stats_skills, str(stats_choice[3]), font=font, fill=(0, 0, 0))
+    elif 17 < i < 21:
+        draw.text(position_stats_skills, str(stats_choice[1]), font=font, fill=(0, 0, 0))
 
 image_first_page.show()
