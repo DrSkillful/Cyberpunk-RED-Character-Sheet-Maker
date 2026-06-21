@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # TKinter
 root = tk.Tk()
-gear = tk.Tk()
+
 
 tk.Label(root, text="Cyberpunk RED Character Sheet Maker - by DrSkillful").grid(row=0, column=3)
 
@@ -463,6 +463,7 @@ def readvalues():
         part += 1
         draw_image()
         submit.destroy()
+        gearshopping()
         ourMessage = "Successfully saved skills and stats!\nTime to shop gear!"
         messageVar = Message(root, text=ourMessage)
         messageVar.config(bg="lightgreen")
@@ -470,67 +471,9 @@ def readvalues():
         button1 = tk.Button(root, text="OK", command=lambda: [gearshopping,root.destroy()])
         button1.grid(row=21, column=9)
 
-def buy():
-    global eddies
-    total = 0
-    weapon_choices = []
-    armor_choices = []
-    gear_choices = []
-
-    for i in range(len(weapon_types)):
-        if weapons[i].get() == 1 and eddies > 0 and eddies > weapon_costs[i]:
-            total += weapon_costs[i]
-            if total < eddies:
-                weapon_choices.append(i)
-
-    for i in range(len(armor_types)):
-        if armors[i].get() == 1 and eddies > 0 and eddies > armor_costs[i]:
-            total += armor_costs[i]
-            if total < eddies:
-                armor_choices.append(i)
-
-    for i in range(len(gear_types)):
-        if purchase_gear[i].get() == 1 and eddies > 0 and eddies > gear_costs[i]:
-            total += gear_costs[i]
-            if total < eddies:
-                gear_choices.append(i)
-
-    if total <= eddies != 0:
-        for i in range(len(weapon_choices)):
-            weapon_inventory.append(weapon_types[weapon_choices[i]])
-
-        for i in range(len(armor_choices)):
-            armor_inventory.append(armor_types[armor_choices[i]])
-
-        for i in range(len(gear_choices)):
-            gear_inventory.append(gear_types[gear_choices[i]])
-
-        eddies -= total
-
-        buymsg = "Items bought successfully!"
-        buym = Message(gear, text=buymsg)
-        buym.config(bg="light green")
-        buym.grid(row=35, column=1)
-        buttonbuy = tk.Button(gear, text="OK", command=lambda: [buym.destroy(), buttonbuy.destroy()])
-        buttonbuy.grid(row=36, column=1)
-
-    else:
-        buymsg = "Purchase failed!"
-        buym = Message(gear, text=buymsg)
-        buym.config(bg="red")
-        buym.grid(row=35, column=1)
-        buttonbuy = tk.Button(gear, text="OK", command=lambda: [buym.destroy(), buttonbuy.destroy()])
-        buttonbuy.grid(row=36, column=1)
-
-    remain = tk.Label(gear, text=f'Total eddies remaining: {eddies}€$')
-    remain.grid(row=37, column=1)
-
-    print(weapon_inventory)
-    print(armor_inventory)
-    print(gear_inventory)
-
 def gearshopping():
-    global eddies, gear
+    global eddies
+    gear = tk.Tk()
     gear.title("Gearshopping")
     gear.state("zoomed")
     buyme = PhotoImage(master=gear, file="assets/buybtn.png")
@@ -566,6 +509,68 @@ def gearshopping():
             tk.Label(gear, text=gear_types[h]).grid(row=h + 2 - 19, column=7)
             tk.Label(gear, text=gear_costs[h]).grid(row=h + 2 - 19, column=8)
             tk.Checkbutton(gear, variable=purchase_gear[h]).grid(row=h + 2 - 19, column=9)
+
+    def buy():
+        global eddies, part
+        total = 0
+        weapon_choices = []
+        armor_choices = []
+        gear_choices = []
+
+        for i in range(len(weapon_types)):
+            if weapons[i].get() == 1 and eddies > 0 and eddies > weapon_costs[i]:
+                total += weapon_costs[i]
+                if total < eddies:
+                    weapon_choices.append(i)
+
+        for i in range(len(armor_types)):
+            if armors[i].get() == 1 and eddies > 0 and eddies > armor_costs[i]:
+                total += armor_costs[i]
+                if total < eddies:
+                    armor_choices.append(i)
+
+        for i in range(len(gear_types)):
+            if purchase_gear[i].get() == 1 and eddies > 0 and eddies > gear_costs[i]:
+                total += gear_costs[i]
+                if total < eddies:
+                    gear_choices.append(i)
+
+        if total <= eddies != 0:
+            for i in range(len(weapon_choices)):
+                weapon_inventory.append(weapon_types[weapon_choices[i]])
+
+            for i in range(len(armor_choices)):
+                armor_inventory.append(armor_types[armor_choices[i]])
+
+            for i in range(len(gear_choices)):
+                gear_inventory.append(gear_types[gear_choices[i]])
+
+            eddies -= total
+
+            buymsg = "Items bought successfully!"
+            buym = Message(gear, text=buymsg)
+            buym.config(bg="light green")
+            buym.grid(row=35, column=1)
+            buttonbuy = tk.Button(gear, text="OK", command=lambda: [buym.destroy(), buttonbuy.destroy()])
+            buttonbuy.grid(row=36, column=1)
+
+            part = 2
+
+        else:
+            buymsg = "Purchase failed!"
+            buym = Message(gear, text=buymsg)
+            buym.config(bg="red")
+            buym.grid(row=35, column=1)
+            buttonbuy = tk.Button(gear, text="OK", command=lambda: [buym.destroy(), buttonbuy.destroy()])
+            buttonbuy.grid(row=36, column=1)
+
+        remain = tk.Label(gear, text=f'Total eddies remaining: {eddies}€$')
+        remain.grid(row=37, column=1)
+
+
+        print(weapon_inventory)
+        print(armor_inventory)
+        print(gear_inventory)
 
     tk.Label(gear, text="").grid(row=36, column=1)
     remain = tk.Label(gear, text=f'Total eddies remaining: {eddies}€$')
