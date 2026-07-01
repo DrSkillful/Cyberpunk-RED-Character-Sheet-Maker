@@ -584,11 +584,13 @@ def gearshopping():
         print(armor_inventory)
         print(gear_inventory)
 
-    remain = tk.Label(gear, text=f'Total eddies remaining: {eddies}€$')
-    remain.grid(row=37, column=1)
-    buybutton = tk.Button(gear, command=buy, image = buyme, borderwidth=0, highlightthickness=0, relief="flat")
-    buybutton.grid(row=37, column=2, columnspan=2)
-    buybutton.image = buyme
+# REWRITE THIS CODE FOR EVERY TAB ======================================================================================================
+    
+    # remain = tk.Label(gear, text=f'Total eddies remaining: {eddies}€$')
+    # remain.grid(row=37, column=1)
+    # buybutton = tk.Button(gear, command=buy, image = buyme, borderwidth=0, highlightthickness=0, relief="flat")
+    # buybutton.grid(row=37, column=2, columnspan=2)
+    # buybutton.image = buyme
 
     gear.mainloop()
 
