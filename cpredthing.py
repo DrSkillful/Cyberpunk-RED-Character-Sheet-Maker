@@ -441,25 +441,25 @@ def readvalues():
         button1 = tk.Button(root, text="OK", command=lambda: [messageVar.destroy(), button1.destroy()])
         button1.grid(row=21, column=1)
 
-    if totalSkills == 86:
+    if totalSkills == 84:
         for i in range(len(skills_all)):
             skills_all[i] = int(skillEntry[i].get())
-    elif totalSkills > 86:
-        errorskills = "Your Skill level total exceeds 86. Please reallocate your stats."
+    elif totalSkills > 84:
+        errorskills = "Your Skill level total exceeds 84. Please reallocate your stats."
         skillserror = Message(root, text=errorskills)
         skillserror.config(bg="red")
         skillserror.grid(row=22, column=1)
         buttonskills = tk.Button(root, text="OK", command=lambda: [skillserror.destroy(), buttonskills.destroy()])
         buttonskills.grid(row=23, column=1)
     else:
-        errorskills = "Your Skill level total is below 86. Please reallocate your stats."
+        errorskills = "Your Skill level total is below 84. Please reallocate your stats."
         skillserror = Message(root, text=errorskills)
         skillserror.config(bg="red")
         skillserror.grid(row=22, column=1)
         buttonskills = tk.Button(root, text="OK", command=lambda: [skillserror.destroy(), buttonskills.destroy()])
         buttonskills.grid(row=23, column=1)
 
-    if totalSkills == 86 and totalStats == 62:
+    if totalSkills == 84 and totalStats == 62:
         part += 1
         draw_image()
         submit.destroy()
@@ -476,39 +476,51 @@ def gearshopping():
     gear = tk.Tk()
     gear.title("Gearshopping")
     gear.state("zoomed")
+    tabCtrl = ttk.Notebook(gear)
+    weapons_tab = ttk.Frame(tabCtrl)
+    armors_tab = ttk.Frame(tabCtrl)
+    gear_tab = ttk.Frame(tabCtrl)
+    cyber_tab = ttk.Frame(tabCtrl)
+    tabCtrl.add(weapons_tab, text='Weapons')
+    tabCtrl.add(armors_tab, text='Armors')
+    tabCtrl.add(gear_tab, text='Gear')
+    tabCtrl.add(cyber_tab, text='Cyberware')
+    tabCtrl.pack(expand=1, fill="both")
     buyme = PhotoImage(master=gear, file="assets/buybtn.png")
 
-    tk.Label(gear, text="Weapons:").grid(row=1, column=1)
-    tk.Label(gear, text="Cost").grid(row=1, column=2)
-    tk.Label(gear, text="Armors:").grid(row=1, column=4)
-    tk.Label(gear, text="Cost").grid(row=1, column=5)
-    tk.Label(gear, text="Gear:").grid(row=12, column=4)
-    tk.Label(gear, text="Cost").grid(row=12, column=5)
-    tk.Label(gear, text="Gear:").grid(row=1, column=7)
-    tk.Label(gear, text="Cost").grid(row=1, column=8)
+    tk.Label(weapons_tab, text="Weapons:").grid(row=1, column=1)
+    tk.Label(weapons_tab, text="Cost").grid(row=1, column=2)
+    tk.Label(armors_tab, text="Armors:").grid(row=1, column=1)
+    tk.Label(armors_tab, text="Cost").grid(row=1, column=2)
+    tk.Label(gear_tab, text="Gear:").grid(row=1, column=1)
+    tk.Label(gear_tab, text="Cost").grid(row=1, column=2)
 
     for i in range(len(weapon_types)):
         weapons.append(tk.IntVar(value=0))
-        tk.Label(gear, text=weapon_types[i]).grid(row=i+2, column=1)
-        tk.Label(gear, text=weapon_costs[i]).grid(row=i+2, column=2)
-        tk.Checkbutton(gear, variable=weapons[i]).grid(row=i+2, column=3)
+        tk.Label(weapons_tab, text=weapon_types[i]).grid(row=i+2, column=1)
+        tk.Label(weapons_tab, text=weapon_costs[i]).grid(row=i+2, column=2)
+        tk.Checkbutton(weapons_tab, variable=weapons[i]).grid(row=i+2, column=3)
 
     for j in range(len(armor_types)):
         armors.append(tk.IntVar(value=0))
-        tk.Label(gear, text=armor_types[j]).grid(row=j+2, column=4)
-        tk.Label(gear, text=armor_costs[j]).grid(row=j + 2, column=5)
-        tk.Checkbutton(gear, variable=armors[j]).grid(row=j + 2, column=6)
+        tk.Label(armors_tab, text=armor_types[j]).grid(row=j+2, column=1)
+        tk.Label(armors_tab, text=armor_costs[j]).grid(row=j + 2, column=2)
+        tk.Checkbutton(armors_tab, variable=armors[j]).grid(row=j + 2, column=3)
 
     for h in range(len(gear_types)):
         purchase_gear.append(tk.IntVar(value=0))
-        if h < 18:
-            tk.Label(gear, text=gear_types[h]).grid(row=h + 13, column=4)
-            tk.Label(gear, text=gear_costs[h]).grid(row=h + 13, column=5)
-            tk.Checkbutton(gear, variable=purchase_gear[h]).grid(row=h + 13, column=6)
-        elif h > 18:
-            tk.Label(gear, text=gear_types[h]).grid(row=h + 2 - 19, column=7)
-            tk.Label(gear, text=gear_costs[h]).grid(row=h + 2 - 19, column=8)
-            tk.Checkbutton(gear, variable=purchase_gear[h]).grid(row=h + 2 - 19, column=9)
+
+        if h < 38:
+            tk.Label(gear_tab, text=gear_types[h]).grid(row=h + 2, column=1)
+            tk.Label(gear_tab, text=gear_costs[h]).grid(row=h + 2, column=2)
+            tk.Checkbutton(gear_tab, variable=purchase_gear[h]).grid(row=h + 2, column=3)
+        else:
+            tk.Label(gear_tab, text=gear_types[h]).grid(row=h + 36, column=4)
+            tk.Label(gear_tab, text=gear_costs[h]).grid(row=h + 36, column=5)
+            tk.Checkbutton(gear_tab, variable=purchase_gear[h]).grid(row=h + 36, column=6)
+
+    for l in range(1):
+        tk.Label(cyber_tab, text=l).grid(row=l, column=1)
 
     def buy():
         global eddies, part
@@ -572,7 +584,6 @@ def gearshopping():
         print(armor_inventory)
         print(gear_inventory)
 
-    tk.Label(gear, text="").grid(row=36, column=1)
     remain = tk.Label(gear, text=f'Total eddies remaining: {eddies}€$')
     remain.grid(row=37, column=1)
     buybutton = tk.Button(gear, command=buy, image = buyme, borderwidth=0, highlightthickness=0, relief="flat")
