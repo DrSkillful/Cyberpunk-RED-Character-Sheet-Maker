@@ -481,6 +481,7 @@ def gearshopping():
     armors_tab = ttk.Frame(tabCtrl)
     gear_tab = ttk.Frame(tabCtrl)
     cyber_tab = ttk.Frame(tabCtrl)
+    tabs = [weapons_tab, armors_tab, gear_tab, cyber_tab]
     tabCtrl.add(weapons_tab, text='Weapons')
     tabCtrl.add(armors_tab, text='Armors')
     tabCtrl.add(gear_tab, text='Gear')
@@ -515,9 +516,9 @@ def gearshopping():
             tk.Label(gear_tab, text=gear_costs[h]).grid(row=h + 2, column=2)
             tk.Checkbutton(gear_tab, variable=purchase_gear[h]).grid(row=h + 2, column=3)
         else:
-            tk.Label(gear_tab, text=gear_types[h]).grid(row=h + 36, column=4)
-            tk.Label(gear_tab, text=gear_costs[h]).grid(row=h + 36, column=5)
-            tk.Checkbutton(gear_tab, variable=purchase_gear[h]).grid(row=h + 36, column=6)
+            tk.Label(gear_tab, text=gear_types[h]).grid(row=h - 36, column=4)
+            tk.Label(gear_tab, text=gear_costs[h]).grid(row=h - 36, column=5)
+            tk.Checkbutton(gear_tab, variable=purchase_gear[h]).grid(row=h - 36, column=6)
 
     for l in range(1):
         tk.Label(cyber_tab, text=l).grid(row=l, column=1)
@@ -584,13 +585,12 @@ def gearshopping():
         print(armor_inventory)
         print(gear_inventory)
 
-# REWRITE THIS CODE FOR EVERY TAB ======================================================================================================
-    
-    # remain = tk.Label(gear, text=f'Total eddies remaining: {eddies}€$')
-    # remain.grid(row=37, column=1)
-    # buybutton = tk.Button(gear, command=buy, image = buyme, borderwidth=0, highlightthickness=0, relief="flat")
-    # buybutton.grid(row=37, column=2, columnspan=2)
-    # buybutton.image = buyme
+    for f in range(len(tabs)):
+        remain = tk.Label(tabs[f], text=f'Total eddies remaining: {eddies}€$')
+        remain.grid(row=37, column=5)
+        buybutton = tk.Button(tabs[f], command=buy, image=buyme, borderwidth=0, highlightthickness=0, relief="flat")
+        buybutton.grid(row=37, column=6, columnspan=2)
+        buybutton.image = buyme
 
     gear.mainloop()
 
@@ -599,4 +599,3 @@ submit.grid(row=19, column=1)
 
 root.state('zoomed')
 root.mainloop()
-
