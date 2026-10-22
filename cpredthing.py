@@ -249,8 +249,8 @@ def draw_image():
                     position_stats = (675, position_y)
                 draw.text(position_stats, str(stats_choice[o]), font=font, fill=(0, 0, 0))
             else:
-                draw.text((323, 1384), str(hp), font=font, fill=(0, 0, 0))
-                draw.text((444, 1263), str(hum), font=font, fill=(0, 0, 0))
+                draw.text((323, 1384), str(stats_choice[10]), font=font, fill=(0, 0, 0))
+                draw.text((444, 1263), str(stats_choice[11]), font=font, fill=(0, 0, 0))
 
         # first column writings
         for k in range(25):
@@ -379,22 +379,22 @@ def draw_image():
                 position_y_skills = 239
                 position_stats_skills = (1590, position_y_skills)
 
-            if i == 4 or i == 7 or i == 16:
+            if i in [4, 7, 16]:
                 position_y_skills += 43
                 position_stats_skills = (1590, position_y_skills)
 
-            if i == 11 or i == 15 or i == 18:
+            if i in [11, 15, 18]:
                 position_y_skills += 40
                 position_stats_skills = (1590, position_y_skills)
 
             if i < 11:
                 draw.text(position_stats_skills, str(stats_choice[0]), font=font, fill=(0, 0, 0))
-            elif 10 < i < 15:
+            elif i in [11, 12, 13, 14]:
                 position_y_skills += 2
                 draw.text(position_stats_skills, str(stats_choice[2]), font=font, fill=(0, 0, 0))
             elif i == 15:
                 draw.text(position_stats_skills, str(stats_choice[4]), font=font, fill=(0, 0, 0))
-            elif i == 16 or i == 17:
+            elif i in [16, 17]:
                 draw.text(position_stats_skills, str(stats_choice[3]), font=font, fill=(0, 0, 0))
             elif 17 < i < 21:
                 draw.text(position_stats_skills, str(stats_choice[1]), font=font, fill=(0, 0, 0))
@@ -405,7 +405,7 @@ def draw_image():
 
 def readvalues():
     global stats_choice, intel, ref, dex, tech, cool, will, luck, move, body, emp, hp, hum, role_choice, statEntry,skillEntry,charname,part
-    stats_choice = [intel, ref, dex, tech, cool, will, luck, move, body, emp]
+    stats_choice = [intel, ref, dex, tech, cool, will, luck, move, body, emp, hp, hum]
     charname = charName.get()
     role_choice = role.get()
     totalStats = 0
@@ -415,7 +415,7 @@ def readvalues():
         totalStats += int(statEntry[i].get())
 
     for i in range(65):
-        if i == 12 or i == 38 or i == 33 or i == 54 or i == 55 or i == 59 or i == 38 or i == 40:
+        if i in [12, 38, 33, 54, 55, 59, 38, 40]:
             totalSkills += int(skillEntry[i].get()) + int(skillEntry[i].get())
         else:
             totalSkills += int(skillEntry[i].get())
@@ -424,8 +424,8 @@ def readvalues():
         for i in range(10):
             stats_choice[i] = int(statEntry[i].get())
 
-        hp = 10 + (body+will)/2
-        hum = emp*10
+        stats_choice[10] = 10 + (body+will)/2
+        stats_choice[11] = emp*10
     elif totalStats > 62:
         ourMessage = "Your Stat point total exceeds 62. Please reallocate your stats."
         messageVar = Message(root, text=ourMessage)
